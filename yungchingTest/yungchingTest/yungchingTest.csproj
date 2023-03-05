@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Icon\favicon.ico" />
+    <None Include="wwwroot\Image\AfricanSweetPotatoSoup.png" />
+    <None Include="wwwroot\Image\Chicken.png" />
+    <None Include="wwwroot\Image\CookedVegetables.png" />
+    <None Include="wwwroot\Image\Fish.png" />
+    <None Include="wwwroot\Image\PestoPasta.png" />
+    <None Include="wwwroot\Image\PorkRice.png" />
+    <None Include="wwwroot\Image\TastyBurger.png" />
+    <None Include="wwwroot\Image\VeganMushrooBBQ.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
   </ItemGroup>

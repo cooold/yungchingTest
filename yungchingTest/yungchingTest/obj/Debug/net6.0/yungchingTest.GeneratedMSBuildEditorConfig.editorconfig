@@ -16,12 +16,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\code\codeing\MVC\yungchingTest\yungchingTest\yungchingTest
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/code/codeing/MVC/yungchingTest/yungchingTest/yungchingTest/Views/Home/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/code/codeing/MVC/yungchingTest/yungchingTest/yungchingTest/Views/Home/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/code/codeing/MVC/yungchingTest/yungchingTest/yungchingTest/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/code/codeing/MVC/yungchingTest/yungchingTest/yungchingTest/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[F:/code/codeing/MVC/yungchingTest/yungchingTest/yungchingTest/Views/Home/Query.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/code/codeing/MVC/yungchingTest/yungchingTest/yungchingTest/Views/Home/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/code/codeing/MVC/yungchingTest/yungchingTest/yungchingTest/Views/Shared/Error.cshtml]
