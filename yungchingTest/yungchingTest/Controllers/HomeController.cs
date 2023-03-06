@@ -38,6 +38,12 @@ namespace yungchingTest.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Create(Meal meal, IFormFile mealImg)
+        {
+            _MealServer.CreateMeal(meal, mealImg);
+            return RedirectToAction("Update");
+        }
 
         public IActionResult Update()
         {
@@ -47,14 +53,21 @@ namespace yungchingTest.Controllers
         [HttpPost]
         public IActionResult Update(Meal meal)
         {
-            _MealServer.upgateMeal(meal);
+            _MealServer.UpgateMeal(meal);
             return RedirectToAction("Update");
         }
 
 
         public IActionResult Delete()
         {
-            return View();
+            List<Meal> result = _MealServer.QueryAll();
+            return View(result);
+        }
+        [HttpPost]
+        public IActionResult Delete(Meal meal)
+        {
+            _MealServer.RemoveById(meal.Id);
+            return RedirectToAction("Delete");
         }
     }
 }

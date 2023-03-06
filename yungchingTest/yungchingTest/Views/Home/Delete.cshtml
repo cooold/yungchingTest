@@ -1,8 +1,37 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<yungchingTest.Models.Meal>
+
 @{
+    ViewBag.Title = "Delete";
 }
-<div class="text-center">
-    <h1 class="display-4">Delete</h1>
+
+<script type="text/javascript">
+    function SubmitForm() {
+        var r = confirm("Are you sure you want to Delete?");
+        if (r == false) {
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="row justify-content-center">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mt-3">
+            <div class="thumbnail">
+                <img src="~/image/@item.Img" style="width:200px;height:270px;">
+                <div class="caption">
+                    <form action="@Url.Action("Delete")" method="post">
+                        <input type="hidden" id="Meal.id" name="Meal.id" required="required" readonly="readonly" class="form-control" value="@item.Id" />
+                        <p class="mt-3">Name：@item.Name</p>
+                        <input type="text" id="Meal.Name" name="Meal.Name" required="required" class="form-control mt-3" value="@item.Name" disabled="disabled" />
+                        <p class="mt-3">Price：@item.Price</p>
+                        <input type="number" id="Meal.Price" name="Meal.Price" required="required" class="form-control" value="@item.Price" disabled="disabled" />
+                        <input type="submit" value="Delete" onclick="SubmitForm()" class="btn btn-danger mt-3 " />
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
 </div>
+
