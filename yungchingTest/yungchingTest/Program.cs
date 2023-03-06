@@ -1,9 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using yungchingTest.Data;
+using yungchingTest.Server;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<MealServer, MealServer>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

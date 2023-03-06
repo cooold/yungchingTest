@@ -2,18 +2,17 @@
 using System.Diagnostics;
 using yungchingTest.Models;
 using yungchingTest.Data;
+using yungchingTest.Server;
 
 namespace yungchingTest.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly ApplicationDbContext _context;
+        private readonly MealServer _MealServer;
 
-        public HomeController(ILogger<HomeController> logger,ApplicationDbContext context)
+        public HomeController(MealServer MealServer)
         {
-            _logger = logger;
-            _context = context;
+            _MealServer = MealServer;
         }
 
         public IActionResult Index()
@@ -25,6 +24,13 @@ namespace yungchingTest.Controllers
         {
             return View();
         }
+        public IActionResult SerchResult(string key)
+        {
+            
+            List<Meal> result = _MealServer.QueryByKey(key);
+            return View(result);
+        }
+
 
         public IActionResult Create()
         {

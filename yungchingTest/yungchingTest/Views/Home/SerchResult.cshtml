@@ -1,0 +1,42 @@
+﻿@model IEnumerable<yungchingTest.Models.Meal>
+
+@{
+    ViewBag.Title = "SerchResult";
+}
+
+
+<script type="text/javascript">
+    function sendSerch() {
+        var serchKey = document.getElementById("form1").value;
+        console.log(serchKey)
+        var url = "@Url.Action("SerchResult", "Home")?key=" + serchKey;
+        location.href = url;
+    }
+</script>
+<div class="input-group justify-content-center">
+    <input type="search" id="form1" name="key" class="form-control" />
+    <a onclick="sendSerch()" class="btn btn-primary">
+        <i class="fa fa-search"></i>
+    </a>
+</div>
+
+<div class="row justify-content-center mt-5">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <img src="~/image/@item.Img" style="width:200px;height:270px;">
+                <div class="caption mt-3">
+                    <h4>@item.Name</h4>
+                    <p>Price：@item.Price</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@if (@Model.Count() < 1)
+{
+    <div>
+        <p align="center">查無結果</p>
+    </div>
+}
