@@ -3,6 +3,7 @@ using System.Diagnostics;
 using yungchingTest.Models;
 using yungchingTest.Data;
 using yungchingTest.Server;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace yungchingTest.Controllers
 {
@@ -24,6 +25,7 @@ namespace yungchingTest.Controllers
         {
             return View();
         }
+        [HttpGet]
         public IActionResult SerchResult(string key)
         {
             
@@ -39,8 +41,16 @@ namespace yungchingTest.Controllers
 
         public IActionResult Update()
         {
-            return View();
+            List<Meal> result = _MealServer.QueryAll();
+            return View(result);
         }
+        [HttpPost]
+        public IActionResult Update(Meal meal)
+        {
+            _MealServer.upgateMeal(meal);
+            return RedirectToAction("Update");
+        }
+
 
         public IActionResult Delete()
         {
